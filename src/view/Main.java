@@ -2,6 +2,7 @@ package view;
 import java.util.Scanner;
 import model.Carro;
 import model.ContaBancaria;
+import model.Produto;
 
 public class Main {
     public static void main(String[] args) {
@@ -33,5 +34,12 @@ public class Main {
         }
 
         System.out.println("Operações encerradas.");
+
+        Produto bolacha = new Produto ("bolacha", 2.50, 10);
+        System.out.println("digite o novo preço da bolacha: ");
+        bolacha.setPreco(scan.nextDouble());
+        System.out.println("digite a nova quantidade de bolachas: ");
+        bolacha.setQuantidade(scan.nextInt());
+        System.out.println("O preço da bolacha é: " + bolacha.getPreco() + " e a quantidade é: " + bolacha.getQuantidade());
     }
 }
